@@ -1,0 +1,49 @@
+/*------------ Intro Section ---------------*/
+.product{
+    &__title{
+        @include heading;
+        overflow: hidden;
+    }
+    &__container{
+        @include box-content;
+        
+        &-box{
+            overflow: hidden;
+            flex: 1 1 35rem;
+            @include tablet ($min-screen : 481px, $max-screen : 780px) {
+                flex: 1 1 30rem;
+            }
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            &:hover .box-icons,
+            &:focus .box-icons{
+                display: inline;
+            }
+            img{
+                padding-top: 5rem;
+                max-width: 80%;
+                transform: rotate(-25deg);
+            }
+            .box{
+                &-content{
+                    padding-top: 5rem;
+                }
+                &-icons{
+                    top: 1%;
+                    left: 1%;
+                    position: absolute;
+                    writing-mode: tb;
+                    display: none;
+                    animation: shoe .3s linear;
+                }
+                @keyframes shoe{
+                    0%{
+                        transform: rotate(0deg) scale(.5);
+                    }
+                }
+            }
+            
+        }
+    }
+}

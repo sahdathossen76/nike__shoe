@@ -121,14 +121,26 @@ a{
 }
 .stars i{
   font-size: 2rem;
-  color: rgba($red, 0.9);
+  color: rgba($yellow, 0.9);
   padding: .5rem 0;
 }
 .stars i:nth-child(5){
-  color: rgba($dark, 0.1);
+  color: rgba($yellow, 0.1);
 }
 .support i{
   font-size: 2rem;
   color: rgba($yellow, 0.9);
   padding: .5rem 0;
+}
+.box-icons a{
+  font-size: 2rem;
+  @include box;
+  padding: 1.2rem;
+  color: rgba($dark-blue, 0.9);
+  background: rgba($white, 0.9);
+}
+.box-icons a:hover,
+.box-icons a:focus{
+  color: rgba($white, 0.9);
+  background: rgba($yellow, 0.9);
 }
