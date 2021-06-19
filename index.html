@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo webside</title>
+    <!-- font-awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Style Css -->
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <!-- heder Section -->
+    <header class="nav">
+        <div class="container">
+            <div class="nav__bar fas fa-bars" id="nav__bar"></div>
+            <a href="" class="nav__logo hover">nike</a>
+            <div class="nav__nav-bar" id="nav_bar">
+                <a href="#" class="hover">home</a>
+                <a href="#" class="hover">product</a>
+                <a href="#" class="hover">featured</a>
+                <a href="#" class="hover">review</a>
+            </div>
+            <div class="nav__icons">
+                <a href="#" class="fas fa-heart hover"></a>
+                <a href="#" class="fas fa-shopping-cart hover"></a>
+                <a href="#" class="fas fa-user hover"></a>
+            </div>
+        </div>
+    </header>
+    <div class="hero" id="home">
+        <div class="container-fluid">
+            <div class="hero__slider hero__active">
+                <div class="hero__slider-container">
+                    <div class="hero__slider--text">
+                        <h2>nike Metcon shoe</h2>
+                        <h1>Nike <span class="span-3">yellow</span> Shoes</h1>
+                        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
+                         Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
+                        <a href="" class="hero__slider-btn btn">add to card</a>
+                    </div>
+                    <div class="hero__slider--img">
+                        <img src="img/home-shoe-3.png" class="shoe" alt="">
+                        <img src="img/home-text-3.png" class="text" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="hero__slider">
+                <div class="hero__slider-container">
+                    <div class="hero__slider--text">
+                        <h2>nike Metcon shoe</h2>
+                        <h1>Nike <span class="span-1">red</span> Shoes</h1>
+                        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
+                         Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
+                        <a href="" class="hero__slider-btn btn">add to card</a>
+                    </div>
+                    <div class="hero__slider--img">
+                        <img src="img/home-shoe-1.png" class="shoe" alt="">
+                        <img src="img/home-text-1.png" class="text" alt="">
+                    </div> 
+                </div>
+            </div>
+            <div class="hero__slider">
+                <div class="hero__slider-container">
+                    <div class="hero__slider--text">
+                        <h2>nike Metcon shoe</h2>
+                        <h1>Nike <span class="span-2">blue</span> Shoes</h1>
+                        <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit.
+                         Repellat Maiores Et Eos Eaque Veritatis Aut Laboriosam Earum Dolorem Iste Atque.</p>
+                        <a href="" class="hero__slider-btn btn">add to card</a>
+                    </div>
+                    <div class="hero__slider--img">
+                        <img src="img/home-shoe-2.png" class="shoe" alt="">
+                        <img src="img/home-text-2.png" class="text" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="prev" class="fa fa-chevron-left" onclick="prev()"></div>
+        <div id="next" class="fa fa-chevron-right" onclick="next()"></div>
+    </div>
+    <!-- Support Section -->
+    <section class="support">
+        <div class="container">
+            <div class="support__area">
+                <div class="support__area--delivery">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h1>Fast Delivery</h1>
+                    <p>Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Illum, Fugit.</p>
+                </div>
+                <div class="support__area--replacement">
+                    <i class="fas fa-undo"></i>
+                    <h1>10 Days Replacements</h1>
+                    <p>Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Illum, Fugit.</p>
+                </div>
+                <div class="support__area--time">
+                    <i class="fas fa-headset"></i>
+                    <h1>24 X 7 Support</h1>
+                    <p>Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Illum, Fugit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>

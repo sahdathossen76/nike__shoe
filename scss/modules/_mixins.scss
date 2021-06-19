@@ -1,0 +1,42 @@
+@mixin heading {
+  text-align: center;
+  font-size: 3.125rem;
+  font-weight: $fw-b;
+  font-family: $ff-ss;
+  line-height: 1.2;
+  color: rgba($dark-blue, 0.9);
+  white-space: nowrap;
+}
+@mixin text {
+  font-size: 1.7rem;
+  font-weight: $ff-s;
+  font-family: $ff-ss;
+  color: rgba($dark-gray, 0.9);
+}
+@mixin card-title {
+  font-size: 2.8rem;
+  font-weight: $fw-b;
+  font-family: $ff-ss;
+  line-height: 1.2;
+  color: rgba($dark, 0.9);
+  white-space: nowrap;
+}
+@mixin box-content ($flx-wrp: wrap, $flx-direc: row){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: $flx-wrp;
+  flex-direction: $flx-direc;
+  gap: 1.5rem;
+}
+@mixin box {
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  text-align: center;
+  background: $white;
+  box-shadow: 0 0.5rem 1rem rgba($dark, 0.1);
+  border: .1rem solid rgba($dark, .2);
+  border-radius: .5rem;
+  cursor: pointer;
+}

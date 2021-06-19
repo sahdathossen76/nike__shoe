@@ -1,0 +1,33 @@
+/* computer screen */
+
+@mixin computer_lg ($min-screen : 1281px) {
+    @media screen  and (min-device-width : $min-screen) {
+        @content;
+  }
+}
+
+/* computer screen */
+
+@mixin computer_md ($min-screen : 768px, $max-screen : 1280px) {
+    @media screen  and (min-device-width : $min-screen) and (max-device-width : $max-screen) {
+        @content;
+  }
+}
+/* tablet screen */
+
+@mixin tablet ($min-screen : 481px, $max-screen : 767px) {
+    @media screen  and (min-device-width : $min-screen) and (max-device-width : $max-screen) {
+        @content;
+  }
+}
+
+/* mobile screen */
+
+@mixin mobile ($max-screen : 480px) {
+    @media screen and (max-device-width : $max-screen) {
+        @content;
+  }
+}
+
+
+

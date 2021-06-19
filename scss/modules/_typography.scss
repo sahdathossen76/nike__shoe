@@ -1,0 +1,59 @@
+/* put your font link here*/
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,900|Six+Caps');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+/* put your font variable here*/
+$ff-s: 'Merriweather', serif;
+$ff-ss: 'Nunito', sans-serif;
+
+/* put your font width here*/
+$fw-n: 400;
+$fw-b: 900;
+
+/* mix your font here*/
+@mixin sans-serif($fs, $ls: .15em, $color: $dark, $tt: uppercase, $lh: 1) {
+  font-size: $fs;
+  letter-spacing: $ls;
+  color: $color;
+  text-transform: $tt;
+  line-height: $lh;
+  font-family: $ff-ss;
+  font-weight: $fw-n;
+}
+
+@mixin serif($fs, $ls: .5em, $color: $dark, $tt: uppercase, $lh: 1) {
+  font-size: $fs;
+  letter-spacing: $ls;
+  color: $color;
+  text-transform: $tt;
+  line-height: $lh;
+  font-family: $ff-ss;
+  font-weight: $fw-n;
+}
+
+
+/* font renponsive */
+
+
+/* Large font */
+
+@mixin font_lg ($min-screen : 768px) {
+  @media screen  and (min-device-width : $min-screen) {
+      @content;
+}
+}
+
+/* medium font */
+
+@mixin font_md ($min-screen : 481px, $max-screen : 767px) {
+  @media screen  and (min-device-width : $min-screen) and (max-device-width : $max-screen) {
+      @content;
+}
+}
+
+/* small font */
+
+@mixin font_sm ( $max-screen : 480px) {
+  @media screen and (max-device-width : $max-screen) {
+      @content;
+}
+}

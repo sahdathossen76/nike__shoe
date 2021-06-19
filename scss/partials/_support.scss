@@ -1,0 +1,26 @@
+.support{
+    .container{
+        
+    }
+    &__area{
+        @include box-content ($flx-wrp: wrap);
+        
+        &--delivery ,&--replacement, &--time{
+            flex: 1 1 30%;
+            @include box;
+            @include computer_md ($min-screen : 768px, $max-screen : 1404px){
+                flex: 1 1 35%;
+            }
+        }
+        &--delivery ,&--replacement, &--time{
+            i{
+                font-size: 1.5rem;
+            }            
+        }
+        &--replacement{
+        }
+        &--time{
+        }
+  
+    }
+}

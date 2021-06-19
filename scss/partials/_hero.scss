@@ -1,0 +1,125 @@
+/*------------ Hero Section ---------------*/
+.hero{
+  padding: 0;
+  position: relative;
+    &__slider{
+        display: none;
+        &-container{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding: 0 9%;
+            padding-top: calc(9rem);
+            
+            &:nth-child(1) {
+                background: url(/img/home-bg-1.jpg) no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            &:nth-child(2) {
+                background: url(/img/home-bg-2.jpg) no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            &:nth-child(3) {
+                background: url(/img/home-bg-3.jpg) no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        &--text{
+            flex: 1 1 40rem;
+            animation: slideContent .5s linear 1s ;
+
+            h2{
+                @include text;
+                font-size: 2rem;
+            }
+            h1{
+                @include heading;
+                font-size: 4rem;
+                text-align: left;
+            }
+            p{
+                @include text;
+            }
+            @keyframes slideContent{
+                0%{
+                  opacity: 0;
+                  transform: translateX(-10rem);
+                }
+              }
+        }
+        &--img{
+            flex: 1 1 50rem;
+            padding-bottom: 15rem;
+            position: relative;
+            z-index: 0;
+            @include mobile ($max-screen : 365px){
+                top: 8rem;
+            }
+            .shoe{
+                width: 100%;
+                transform: rotate(-35deg);
+                animation: shoe .3s linear;
+            }
+
+            @keyframes shoe{
+                0%{
+                    transform: rotate(0deg) scale(.5);
+                }
+            }
+            .text{
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include mobile ($max-screen : 873px){
+                    top: -14rem;
+                }
+                z-index: -1;
+                transform: rotate( -15deg);
+                animation: shoeText .5s linear .5s backwards;
+            }
+            
+            @keyframes shoeText{
+              0%{
+                opacity: 0;
+                top:-10rem;
+              }
+            }
+            
+        }
+    }
+    &__active{
+        display: block;
+    }
+    #prev,#next{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        z-index: 100;
+        height: 5rem;
+        width: 5rem;
+        line-height: 4.5rem;
+        font-size: 2rem;
+        color: rgba($dark, 0.8);
+        border: 0.3rem solid rgba($yellow, 0.8);
+        cursor: pointer;
+        text-align: center;
+    }
+    #prev,#next{
+        background: rgba($light, 0.8);
+    }
+    #prev{
+        left: 3rem;
+    }
+    #next{
+        right: 3rem;
+    }
+}
+.span-1{color: rgba($red, 0.8);}
+.span-2{color: rgba($blue, 0.8);}
+.span-3{color: rgba($yellow, 0.8);}

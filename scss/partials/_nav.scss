@@ -1,0 +1,72 @@
+/*---------------Menu Start---------------*/
+.nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 2rem 0;
+    background: $white;
+    box-shadow: 0 .5rem 1rem rgba($dark, 0.1);
+    .container{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+    &__bar{
+        font-size: 3rem;
+        cursor: pointer;
+        color: rgba($dark-gray, 0.9);
+        border: 0.1rem solid rgba($yellow, 0.6);
+        border-radius: .3rem;
+        padding: 0.4rem 1.5rem;
+        @include computer_lg ($min-screen : 769px){
+            display: none;
+        } 
+    }
+    &__logo{
+        font-size: 2.5rem;
+        font-weight: $fw-b;
+        color: rgba($dark-blue, 0.9);
+    }
+    &__nav-bar{
+        @include mobile ($max-screen : 768px){
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: $light-gray;
+            border-top: 0.1rem solid rgba($dark, 0.1);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
+            a{
+                margin: 1.5rem;
+                padding: 1.5rem;
+                display: block;
+                border: 0.2rem solid rgba($dark, 0.1);
+                border-left: 0.5rem solid rgba($yellow, 0.9);
+                border-right: 0.5rem solid rgba($yellow, 0.9);
+                color: $white;
+                text-align: center;
+            }
+        }
+        a{
+            color: rgba($dark-gray, 0.9);
+            margin-left: 2rem;
+            font-size: 2.125rem;
+        }
+        
+    }
+    &__icons{
+        font-size: 2rem;
+        a{
+            padding: 0 0.8rem;
+            color: rgba($dark-blue, 0.9);
+        }
+    }
+}
+
