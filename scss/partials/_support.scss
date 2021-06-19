@@ -4,12 +4,14 @@
     }
     &__area{
         @include box-content ($flx-wrp: wrap);
-        
+        @include box;
         &--delivery ,&--replacement, &--time{
             flex: 1 1 30%;
-            @include box;
             @include computer_md ($min-screen : 768px, $max-screen : 1404px){
-                flex: 1 1 35%;
+                flex: 1 1 25%;
+            }
+            @include mobile ($max-screen : 767px){
+                flex: 1 1 20%;
             }
         }
         &--delivery ,&--replacement, &--time{
