@@ -5,15 +5,14 @@
         overflow: hidden;
     }
     &__container{
-        //@include box-content;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        //@include box-flex;
+        @include box-grid;
 
         @include mobile ($max-screen : 480px) {
             grid-template-columns: repeat(1, 1fr);
         }
-        @include tablet ($min-screen : 481px, $max-screen : 980px) {
-            grid-template-columns: repeat(2, 1fr);
+        @include computer_lg ($min-screen : 980px) {
+            grid-template-columns: repeat(3, 1fr);
         }
         
         gap: 1.5rem;

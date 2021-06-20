@@ -585,8 +585,9 @@ a {
 .product__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
   gap: 1.5rem;
 }
 
@@ -597,10 +598,10 @@ a {
   }
 }
 
-@media screen and (min-device-width: 481px) and (max-device-width: 980px) {
+@media screen and (min-device-width: 980px) {
   .product__container {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 

@@ -21,12 +21,17 @@
   color: rgba($dark, 0.9);
   white-space: nowrap;
 }
-@mixin box-content ($flx-wrp: wrap, $flx-direc: row){
+@mixin box-flex ($flx-wrp: wrap, $flx-direc: row){
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: $flx-wrp;
   flex-direction: $flx-direc;
+  gap: 1.5rem;
+}
+@mixin box-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 @mixin box {
