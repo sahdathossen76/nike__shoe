@@ -507,6 +507,7 @@ a {
   color: rgba(255, 159, 26, 0.8);
 }
 
+/*------------ Support Section ---------------*/
 .support__area {
   display: -ms-grid;
   display: grid;
@@ -880,7 +881,7 @@ a {
   cursor: pointer;
 }
 
-/*------------ contact Section ---------------*/
+/*------------ Newsletter Section ---------------*/
 .newsletter {
   text-align: center;
   margin: 0 9%;
@@ -960,7 +961,7 @@ a {
   }
 }
 
-/*------------Footer Start-------------*/
+/*------------Footer Section-------------*/
 .footer {
   text-align: center;
   margin: 0 9%;
