@@ -17,6 +17,7 @@
             @include box;
             text-align: left;
             margin-top: auto;
+            cursor: unset;
             .box{
                 
                 &-img{
@@ -33,12 +34,22 @@
                         float: left;
                     }
                     &-cover{
-                        width: 65%;
-                        padding: 5%;
+                        width: 70%;
+                        padding: 15%;
+                        @include mobile ($max-screen : 876px){
+                            width: 80%;
+                            padding: 15%;
+                        }
                         float: right;
+                        text-align: center;
+                        cursor: pointer;
                         &:hover,
                         &:focus{
                             transform: scale(1.5);
+                        }
+                        img{
+                            margin: auto;
+                            display: block;
                         }
                     }
                 }
@@ -49,9 +60,11 @@
                     margin: auto 0;
                 }
                 &-title{
+                    
                     @include card-title;
                     @include mobile ($max-screen : 876px){
                         font-size: 2.2rem;
+                        margin-top: 1.2rem
                     }
                 }
                 
