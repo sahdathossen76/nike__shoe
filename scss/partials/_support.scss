@@ -1,39 +1,45 @@
 .support{
     &__area{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "delivery replacement time";
-        grid-column-gap: 1.5rem;
-        @include box;
+        grid-template-columns: repeat(1, 1fr);
+        @include computer_lg ($min-screen : 555px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        grid-gap: 1.5rem;
+        
         padding: 1rem;
         i{
-            font-size: 2.7rem;
-        }
-        &--deliverye{
-            grid-area: delivery;           
+            font-size: 4rem;
+        } 
+        &--delivery{  
+            @include box;
         }
         &--replacement{
-            grid-area: replacement;
+            @include box;
         }
         &--time{
-            grid-area: time;
+            @include box;
         }
         
     }
     &__heading{
         @include text;
-        @include mobile ($max-screen : 767px){
-            font-size: 1.3rem;
+        font-size: 1.8rem;
+        @include mobile ($max-screen : 651px){
+            font-size: 1.2rem;
+            width: 70%;
+            margin: 0 auto;
         }
-        @include mobile ($max-screen : 280px){
-            font-size: 1rem;
-        }
+            
+        
     }
-    &____text{
+    &__text{
         @include text;
-        font-size: 1rem;
-        @include mobile ($max-screen : 280px){
+        font-size: 1.2rem;
+        @include mobile ($max-screen : 651px){
             font-size: 0.8rem;
+            width: 70%;
+            margin: 0 auto;
         }
     }
 }

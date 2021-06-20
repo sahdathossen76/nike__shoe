@@ -1,5 +1,43 @@
 /*------------Footer Start-------------*/
 .footer{
-    
-    
+    text-align: center;
+    margin: 0 9%;
+    @include box; 
+    margin-top: 4rem;
+    .container-fluid{
+        margin: 0;
+    }
+    &__wrapper{
+       @include box-grid;
+       @include computer_lg ($min-screen : 850px){
+        grid-template-columns: repeat(4, 1fr);
+       }
+       @include mobile ($max-screen : 430px){
+        grid-template-columns: repeat(1, 1fr);
+       }
+       justify-content: space-between;
+    }
+    &__div{
+        @include computer_lg ($min-screen : 431px){
+            margin-right: auto;
+        }
+    }
+    &__title{
+        @include card-title;
+    }
+    &__link{
+        display: flex;
+        flex-direction: column;
+        @include computer_lg ($min-screen : 431px){
+            align-items: flex-start;
+        }
+        a{
+            @include text;
+            font-size: 1.4rem;
+            &:hover,
+            &:focus{
+                color: rgba($yellow, 0.9);
+            }
+        }
+    }
 }

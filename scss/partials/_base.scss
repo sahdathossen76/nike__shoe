@@ -138,11 +138,13 @@ a{
   padding: 1.2rem;
   color: rgba($dark-blue, 0.9);
   background: rgba($white, 0.9);
+  cursor: pointer;
 }
 .box-icons a:hover,
 .box-icons a:focus{
   color: rgba($white, 0.9);
   background: rgba($yellow, 0.9);
+  cursor: pointer;
 }
 .box-price{
   font-size: 1.7rem;

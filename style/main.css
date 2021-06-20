@@ -188,12 +188,14 @@ a {
   padding: 1.2rem;
   color: rgba(44, 44, 89, 0.9);
   background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
 }
 
 .box-icons a:hover,
 .box-icons a:focus {
   color: rgba(255, 255, 255, 0.9);
   background: rgba(255, 159, 26, 0.9);
+  cursor: pointer;
 }
 
 .box-price {
@@ -508,10 +510,24 @@ a {
 .support__area {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: "delivery replacement time";
-  grid-column-gap: 1.5rem;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1.5rem;
+  padding: 1rem;
+}
+
+@media screen and (min-device-width: 555px) {
+  .support__area {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.support__area i {
+  font-size: 4rem;
+}
+
+.support__area--delivery {
   position: relative;
   padding: 2rem;
   overflow: hidden;
@@ -522,29 +538,32 @@ a {
   border: 0.1rem solid rgba(34, 33, 33, 0.2);
   border-radius: .5rem;
   cursor: pointer;
-  padding: 1rem;
-}
-
-.support__area i {
-  font-size: 2.7rem;
-}
-
-.support__area--deliverye {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: delivery;
 }
 
 .support__area--replacement {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: replacement;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  text-align: center;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(34, 33, 33, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(34, 33, 33, 0.1);
+  border: 0.1rem solid rgba(34, 33, 33, 0.2);
+  border-radius: .5rem;
+  cursor: pointer;
 }
 
 .support__area--time {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: time;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  text-align: center;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(34, 33, 33, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(34, 33, 33, 0.1);
+  border: 0.1rem solid rgba(34, 33, 33, 0.2);
+  border-radius: .5rem;
+  cursor: pointer;
 }
 
 .support__heading {
@@ -552,35 +571,34 @@ a {
   font-weight: "Merriweather", serif;
   font-family: "Nunito", sans-serif;
   color: rgba(96, 96, 96, 0.9);
+  font-size: 1.8rem;
 }
 
-@media screen and (max-device-width: 767px) {
+@media screen and (max-device-width: 651px) {
   .support__heading {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
-@media screen and (max-device-width: 280px) {
-  .support__heading {
-    font-size: 1rem;
-  }
-}
-
-.support____text {
+.support__text {
   font-size: 1.7rem;
   font-weight: "Merriweather", serif;
   font-family: "Nunito", sans-serif;
   color: rgba(96, 96, 96, 0.9);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
-@media screen and (max-device-width: 280px) {
-  .support____text {
+@media screen and (max-device-width: 651px) {
+  .support__text {
     font-size: 0.8rem;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
-/*------------ Intro Section ---------------*/
+/*------------ Product Section ---------------*/
 .product__title {
   text-align: center;
   font-size: 3.125rem;
@@ -687,7 +705,7 @@ a {
   }
 }
 
-/*------------ About Me Section ---------------*/
+/*------------ Featured Section ---------------*/
 .featured__title {
   text-align: center;
   font-size: 3.125rem;
@@ -810,7 +828,225 @@ a {
   }
 }
 
-/*------------ Portfolio Section ---------------*/
+/*------------ Review Section ---------------*/
+.review__title {
+  text-align: center;
+  font-size: 3.125rem;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  color: rgba(44, 44, 89, 0.9);
+  white-space: nowrap;
+}
+
+.review__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media screen and (max-device-width: 877px) {
+  .review__container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.review__container-area {
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  text-align: center;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(34, 33, 33, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(34, 33, 33, 0.1);
+  border: 0.1rem solid rgba(34, 33, 33, 0.2);
+  border-radius: .5rem;
+  cursor: pointer;
+  padding-top: 0.5rem;
+}
+
+.review__container-img {
+  height: 15rem;
+  width: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1.2rem solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 /*------------ contact Section ---------------*/
+.newsletter {
+  text-align: center;
+  margin: 0 9%;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  text-align: center;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(34, 33, 33, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(34, 33, 33, 0.1);
+  border: 0.1rem solid rgba(34, 33, 33, 0.2);
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.newsletter .container-fluid {
+  width: 50%;
+}
+
+@media screen and (max-device-width: 650px) {
+  .newsletter .container-fluid {
+    width: 100%;
+  }
+}
+
+.newsletter .container-fluid form {
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+.newsletter__title {
+  text-align: center;
+  font-size: 3.125rem;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  color: rgba(44, 44, 89, 0.9);
+  white-space: nowrap;
+}
+
+.newsletter__text {
+  font-size: 1.7rem;
+  font-weight: "Merriweather", serif;
+  font-family: "Nunito", sans-serif;
+  color: rgba(96, 96, 96, 0.9);
+  font-size: 1.4rem;
+}
+
+@media screen and (max-device-width: 850px) {
+  .newsletter__text {
+    font-size: 1.2rem;
+  }
+}
+
+.newsletter__mail .mail-holder {
+  font-size: 1.7rem;
+  text-transform: none;
+  color: rgba(44, 44, 89, 0.5);
+  padding: 1rem;
+  border: 0.2rem solid rgba(44, 44, 89, 0.5);
+  border-right: none;
+}
+
+.newsletter__mail .mail-sender {
+  width: 10rem;
+  font-size: 1.8rem;
+  text-transform: none;
+  color: rgba(44, 44, 89, 0.5);
+  padding: 1.1rem;
+  border: 0.2rem solid rgba(44, 44, 89, 0.5);
+  margin-bottom: 0.1rem;
+}
+
+@media screen and (max-device-width: 484px) {
+  .newsletter__mail .mail-sender {
+    padding: 1.06rem;
+  }
+}
+
 /*------------Footer Start-------------*/
+.footer {
+  text-align: center;
+  margin: 0 9%;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  text-align: center;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(34, 33, 33, 0.1);
+          box-shadow: 0 0.5rem 1rem rgba(34, 33, 33, 0.1);
+  border: 0.1rem solid rgba(34, 33, 33, 0.2);
+  border-radius: .5rem;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+
+.footer .container-fluid {
+  margin: 0;
+}
+
+.footer__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-device-width: 850px) {
+  .footer__wrapper {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-device-width: 430px) {
+  .footer__wrapper {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-device-width: 431px) {
+  .footer__div {
+    margin-right: auto;
+  }
+}
+
+.footer__title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.2;
+  color: rgba(34, 33, 33, 0.9);
+  white-space: nowrap;
+}
+
+.footer__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-device-width: 431px) {
+  .footer__link {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.footer__link a {
+  font-size: 1.7rem;
+  font-weight: "Merriweather", serif;
+  font-family: "Nunito", sans-serif;
+  color: rgba(96, 96, 96, 0.9);
+  font-size: 1.4rem;
+}
+
+.footer__link a:hover, .footer__link a:focus {
+  color: rgba(255, 159, 26, 0.9);
+}
 /*# sourceMappingURL=main.css.map */

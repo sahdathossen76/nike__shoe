@@ -1,0 +1,27 @@
+/*------------ Review Section ---------------*/
+.review{
+   &__title{
+       @include heading; 
+   }
+   &__container{
+       @include box-grid;
+       @include mobile ($max-screen : 877px){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    
+    grid-template-columns: repeat(3, 1fr);
+       gap: 1.5rem;
+       &-area{
+           @include box;
+           padding-top: 0.5rem;
+       }
+       &-img{
+           height: 15rem;
+           width: 15rem;
+            object-fit: cover;
+            border: 1.2rem solid rgba($white, .2);
+            border-radius: 50%;
+            cursor: pointer;
+       }
+   }
+}

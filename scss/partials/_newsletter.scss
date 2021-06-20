@@ -1,0 +1,51 @@
+/*------------ contact Section ---------------*/
+.newsletter{
+    text-align: center;
+    margin: 0 9%;
+    @include box; 
+    
+    .container-fluid{
+        @include mobile ($max-screen : 650px){
+            width: 100%;
+        }
+       width: 50%;
+       form{
+        white-space: nowrap;
+        margin: 0 auto;
+       }
+    }
+    &__title{
+        @include heading;
+    }
+    &__text{
+        @include text;
+        font-size: 1.4rem;
+        @include mobile ($max-screen : 850px){
+            font-size: 1.2rem;
+        }
+    }
+    &__mail{
+
+        .mail-holder{
+            font-size: 1.7rem;
+            text-transform: none;
+            color: rgba($dark-blue, .5);
+            padding: 1rem;
+            border: .2rem solid rgba($dark-blue, .5);
+            border-right: none;
+        }
+        .mail-sender{
+            width: 10rem;
+            font-size: 1.8rem;
+            text-transform: none;
+            color: rgba($dark-blue, .5);
+            padding: 1.1rem;
+            border: .2rem solid rgba($dark-blue, .5);
+            @include mobile ($max-screen : 484px){
+                padding: 1.06rem;
+            }
+            margin-bottom: 0.1rem;
+        }
+        
+    }
+}
