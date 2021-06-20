@@ -144,3 +144,11 @@ a{
   color: rgba($white, 0.9);
   background: rgba($yellow, 0.9);
 }
+.box-price{
+  font-size: 1.7rem;
+  color: rgba($dark, 0.9);
+  span{
+      font-size: 1.6rem;
+      text-decoration: line-through;
+  }
+}

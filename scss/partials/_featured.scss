@@ -1,0 +1,48 @@
+/*------------ About Me Section ---------------*/
+.featured{
+    &__title{
+       @include heading;
+    }
+    &__container{
+        @include box-grid;
+        grid-row-gap: 1.5rem;
+        
+        &-box{
+            grid-column: 1 / 4;
+            @include box-grid;
+            @include box;
+            text-align: left;
+            margin-top: auto;
+            .box{
+                
+                &-img{
+                    
+                    &-thumbline{
+                        &-icon{
+                            @include box;
+                        }
+                        
+                        width: 20%;
+                        float: left;
+                    }
+                    &-cover{
+                        width: 65%;
+                        padding: 5%;
+                        float: right;
+                        &:hover,
+                        &:focus{
+                            transform: scale(1.5);
+                        }
+                    }
+                }
+                &-content{
+                    margin: auto 0;
+                }
+                &-title{
+                    @include card-title;
+                }
+                
+            }
+        }
+    }
+}

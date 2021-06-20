@@ -51,14 +51,6 @@
                 &-title{
                     @include card-title;
                 }
-                &-price{
-                    font-size: 1.7rem;
-                    color: rgba($dark, 0.9);
-                    span{
-                        font-size: 1.6rem;
-                        text-decoration: line-through;
-                    }
-                }
                 &-icons{
                     top: 2%;
                     left: 1%;
