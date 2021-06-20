@@ -5,23 +5,43 @@
         overflow: hidden;
     }
     &__container{
-        @include box-content;
+        //@include box-content;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include mobile ($max-screen : 480px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @include tablet ($min-screen : 481px, $max-screen : 980px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        gap: 1.5rem;
         
         &-box{
             overflow: hidden;
+            /*
             flex: 1 1 35rem;
-            @include tablet ($min-screen : 481px, $max-screen : 780px) {
+            @include tablet ($min-screen : 481px, $max-screen : 870px) {
                 flex: 1 1 30rem;
             }
+            @include tablet ($min-screen : 1150px, $max-screen : 1400px) {
+                flex: 1 1 30rem;
+            }
+            @include computer_lg ($min-screen : 1760px) {
+                flex: 1 1 45rem;
+            }
+            */
             text-align: center;
             position: relative;
             cursor: pointer;
+            @include box;
             &:hover .box-icons,
             &:focus .box-icons{
                 display: inline;
             }
             img{
-                padding-top: 5rem;
+                padding-top: 8%;
                 max-width: 80%;
                 transform: rotate(-25deg);
             }
@@ -29,8 +49,19 @@
                 &-content{
                     padding-top: 5rem;
                 }
+                &-title{
+                    @include card-title;
+                }
+                &-price{
+                    font-size: 1.7rem;
+                    color: rgba($dark, 0.9);
+                    span{
+                        font-size: 1.6rem;
+                        text-decoration: line-through;
+                    }
+                }
                 &-icons{
-                    top: 1%;
+                    top: 2%;
                     left: 1%;
                     position: absolute;
                     writing-mode: tb;
