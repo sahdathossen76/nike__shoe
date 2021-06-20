@@ -10,12 +10,20 @@
         &-box{
             grid-column: 1 / 4;
             @include box-grid;
+            grid-template-areas: "img  text";
+            @include mobile ($max-screen : 876px){
+                grid-template-areas: "img  img"
+                                    "txt  txt";
+            }
             @include box;
             text-align: left;
             margin-top: auto;
             .box{
                 
                 &-img{
+                    @include mobile ($max-screen : 876px){
+                        grid-area: img ;
+                    }
                     
                     &-thumbline{
                         &-icon{
@@ -36,6 +44,9 @@
                     }
                 }
                 &-content{
+                    @include mobile ($max-screen : 876px){
+                        grid-area: txt;
+                    }
                     margin: auto 0;
                 }
                 &-title{
