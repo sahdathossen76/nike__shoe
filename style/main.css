@@ -714,7 +714,6 @@ a {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-      grid-template-areas: "img  text";
   position: relative;
   padding: 2rem;
   overflow: hidden;
@@ -737,8 +736,6 @@ a {
 
 @media screen and (max-device-width: 876px) {
   .featured__container-box .box-img {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
     grid-area: img;
   }
 }
@@ -789,6 +786,12 @@ a {
   line-height: 1.2;
   color: rgba(34, 33, 33, 0.9);
   white-space: nowrap;
+}
+
+@media screen and (max-device-width: 876px) {
+  .featured__container-box .box-title {
+    font-size: 2.2rem;
+  }
 }
 
 /*------------ Portfolio Section ---------------*/
