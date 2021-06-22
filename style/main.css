@@ -326,19 +326,19 @@ a {
 }
 
 .hero__slider-container:nth-child(1) {
-  background: url(/img/home-bg-1.jpg) no-repeat;
+  background: url(../img/home-bg-1.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .hero__slider-container:nth-child(2) {
-  background: url(/img/home-bg-2.jpg) no-repeat;
+  background: url(../img/home-bg-2.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .hero__slider-container:nth-child(3) {
-  background: url(/img/home-bg-3.jpg) no-repeat;
+  background: url(../img/home-bg-3.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
